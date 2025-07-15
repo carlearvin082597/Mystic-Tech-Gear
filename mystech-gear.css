@@ -203,7 +203,7 @@ a {
   padding: 1.5rem; /* Match .feature-item padding */
   border: 1px solid #292929; /* Match .feature-item border */
   border-radius: 8px; /* Match .feature-item border-radius */
-  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
+  box-shadow: 0 8px 32px rgba(0,0,0,0.18);
   transition: transform 0.3s;
 }
 
@@ -252,15 +252,24 @@ a {
   cursor: pointer;
 }
 
+.pricing-card button:hover {
+  background: #2563eb;
+  color: #c4c1c1; 
+}
+
 /* === 🌟 Testimonials === */
 .testimonials-section {
   width: 100%;
   max-width: 1200px;
   background-color: #1a1a1a; 
   padding: 4rem 2rem;
+  color: #f3f3f3;
+  text-align: center; 
+  border: 2px solid #00ffe1; /* Changed border color and thickness for emphasis */
+  border-radius: 1rem;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.05);
   margin: 0 auto;
 }
-
 .testimonial {
   max-width: 600px;
   margin: 1.5rem auto;
