@@ -1,31 +1,18 @@
-// Mock Email Form Submission
+// 
 document.addEventListener("DOMContentLoaded", () => {
-  const form = document.getElementById("subscribe-form");
+  const form = document.querySelector(".subscribe form");
   const emailInput = document.getElementById("email");
-  const message = document.getElementById("form-message");
 
   form.addEventListener("submit", (e) => {
     e.preventDefault();
-
     const email = emailInput.value.trim();
 
-    if (!email || !validateEmail(email)) {
-      message.textContent = "Please enter a valid email address.";
-      message.style.color = "tomato";
+    if (!email || !/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+      alert("Please enter a valid email.");
       return;
     }
 
-    // Simulate sending...
-    message.textContent = "Subscribing...";
-    message.style.color = "#00ffe1";
-
-    setTimeout(() => {
-      message.textContent = "You're subscribed! 🎉";
-      emailInput.value = "";
-    }, 1000);
+    alert("You're subscribed! 🎉");
+    emailInput.value = "";
   });
-
-  function validateEmail(email) {
-    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
-  }
 });
